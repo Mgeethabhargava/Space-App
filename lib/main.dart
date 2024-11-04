@@ -37,7 +37,7 @@ class ExampleCandidateModel {
 // Function to fetch space information
 Future<List<ExampleCandidateModel>> fetchSpaceInfo() async {
   final response = await http.get(Uri.parse(
-      "https://api.nasa.gov/planetary/apod?api_key=l6PhtenfV5dvA0VaUMipFBkqgmqjfKPVxb3h05xt&count=10"));
+      "https://api.nasa.gov/planetary/apod?api_key=&count=10"));
 
   if (response.statusCode == 200) {
     final List<dynamic> data = jsonDecode(response.body);
